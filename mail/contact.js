@@ -5,8 +5,12 @@ $(function () {
       event.preventDefault();
       var name = $("input#name").val();
       var email = $("input#email").val();
+      var mobile = $("input#mobile").val();
       var subject = $("input#subject").val();
       var message = $("textarea#message").val();
+
+      var $submitButton = $("#sendMessageButton");
+      $submitButton.prop("disabled", true).text("Submitting...");
 
       $.ajax({
         url: "contact.php",
@@ -14,6 +18,7 @@ $(function () {
         data: {
           name: name,
           email: email,
+          mobile: mobile,
           subject: subject,
           message: message,
         },
@@ -28,6 +33,7 @@ $(function () {
           );
           $("#success > .alert-success").append("</div>");
           $("#contactForm").trigger("reset");
+          $submitButton.prop("disabled", false).text("Submit");
         },
         error: function () {
           $("#success").html('<div class="alert alert-danger">');
@@ -43,6 +49,7 @@ $(function () {
           );
           $("#success > .alert-danger").append("</div>");
           $("#contactForm").trigger("reset");
+          $submitButton.prop("disabled", false).text("Submit");
         },
       });
     },

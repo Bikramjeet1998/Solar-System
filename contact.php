@@ -8,13 +8,14 @@ require 'vendor/autoload.php'; // If using Composer
 // require 'path/to/PHPMailer/src/SMTP.php';
 // require 'path/to/PHPMailer/src/Exception.php';
 
-if (empty($_POST['name']) || empty($_POST['subject']) || empty($_POST['message']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+if (empty($_POST['name']) || empty($_POST['subject']) || empty($_POST['message']) || empty($_POST['mobile']) || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
   http_response_code(500);
   exit();
 }
 
 $name = htmlspecialchars($_POST['name']);
 $email = htmlspecialchars($_POST['email']);
+$mobile = htmlspecialchars($_POST['mobile']);
 $m_subject = htmlspecialchars($_POST['subject']);
 $message = htmlspecialchars($_POST['message']);
 
@@ -36,9 +37,10 @@ try {
   $mail->setFrom($email, $name);
   $mail->addAddress($admin_email);
   $mail->Subject = "New Contact Form Submission: $m_subject";
-  $mail->Body = "You have received a new message from your contact form.\n\n" .
+  $mail->Body = "You have received a new message from your Customer.\n\n" .
     "Name: $name\n" .
     "Email: $email\n" .
+    "Mobile: $mobile\n" .
     "Subject: $m_subject\n" .
     "Message:\n$message";
 
