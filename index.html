@@ -31,6 +31,53 @@
     <link href="css/style.css" rel="stylesheet" />
     <style>
 
+#action-tabs {
+            position: fixed;
+            right: 10px;
+            bottom: 30%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        /* Common styling for action buttons */
+        #action-tabs a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            border-radius: 50px;
+            padding: 10px 15px;
+            width: 50px;
+            overflow: hidden;
+            white-space: nowrap;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Hover animation: Expands to show text */
+        #action-tabs a:hover {
+            width: 180px;
+            justify-content: space-between;
+        }
+
+        /* Icons */
+        #action-tabs a::before {
+            content: attr(data-icon);
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        /* Individual button colors */
+        .call { background-color: #007bff; }
+        .whatsp { background-color: #25D366; }
+        .deal-wrp { background-color: #FF9800; }
+        .mail-wrp { background-color: #d9534f; }
+        .cal-wrp { background-color: #673AB7; }
+
 .imgX{
   width: 600px;
    height: 400px}
@@ -99,22 +146,26 @@
             <div
               class="carousel-caption d-flex flex-column align-items-center justify-content-center"
             >
-              <div class="p-3" style="max-width: 900px">
-                <h4
-                  class="display-4 text-white text-uppercase mb-4"
-                  style="letter-spacing: 3px"
-                >
-                Baba Farid Electronics & Solar Energy
-                </h4>
-                <h3 class="display-6 font-secondary text-white mb-4">
-                  Baba Farid Electronics & Solar Energy – Your Trusted Destination for Cutting-Edge Electronics, Renewable Solar Solutions, and Reliable Power Innovations.
-                </h3>
-                <a
-                  class="btn btn-light font-weight-bold py-3 px-5 mt-2 btn-scroll"
-                  href="#contact"
-                  >Get A Quote</a
-                >
-              </div>
+             <div class="p-3" style="max-width: 900px">
+    <h4 class="display-4 text-white text-uppercase mb-4" style="letter-spacing: 3px">
+        Baba Farid Electronics & Solar Energy
+    </h4>
+    
+    <h5 class="text-white font-weight-bold mb-3" 
+    style="font-size: 20px; background: linear-gradient(45deg, #007bff, #0056b3); 
+           padding: 12px 20px; border-radius: 8px; display: inline-block; 
+           box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
+    ✅ Authorized Distributor of 
+    <span style="color: #FFD700; font-weight: bold;">Eapro Solar</span>
+</h5>
+<br>
+    
+
+    <a class="btn btn-light font-weight-bold py-3 px-5 mt-2 btn-scroll" href="#contact">
+        Get A Quote
+    </a>
+</div>
+
             </div>
           </div>
           <div
@@ -129,22 +180,25 @@
             <div
               class="carousel-caption d-flex flex-column align-items-center justify-content-center"
             >
-              <div class="p-3" style="max-width: 900px">
-                <h4
-                  class="display-4 text-white text-uppercase mb-4"
-                  style="letter-spacing: 3px"
-                >
-                Baba Farid Electronics & Solar Energy
-                </h4>
-                <h3 class="display-6 font-secondary text-white mb-4">
-                  Let The Sun Work For Your Home
-                </h3>
-                <a
-                  class="btn btn-light font-weight-bold py-3 px-5 mt-2 btn-scroll"
-                  href="#contact"
-                  >Get A Quote</a
-                >
-              </div>
+            <div class="p-3" style="max-width: 900px">
+              <h4 class="display-4 text-white text-uppercase mb-4" style="letter-spacing: 3px">
+                  Baba Farid Electronics & Solar Energy
+              </h4>
+              
+              <h5 class="text-white font-weight-bold mb-3" 
+    style="font-size: 20px; background: linear-gradient(45deg, #007bff, #0056b3); 
+           padding: 12px 20px; border-radius: 8px; display: inline-block; 
+           box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);">
+    ✅ Authorized Distributor of 
+    <span style="color: #FFD700; font-weight: bold;">Eapro Solar</span>
+</h5>
+<br>
+            
+              <a class="btn btn-light font-weight-bold py-3 px-5 mt-2 btn-scroll" href="#contact">
+                  Get A Quote
+              </a>
+          </div>
+          
             </div>
           </div>
         </div>
@@ -173,48 +227,133 @@
     <!-- About Start -->
     <div class="container-fluid py-5" id="about">
       <div class="container py-5">
-        <div class="row align-items-center">
-          <div class="col-lg-5">
-            <img
-              class="img-fluid mb-4 mb-lg-0"
-              src="img/about-us.jpeg"
-              alt=""
-            />
+          <div class="row align-items-start">
+              <!-- Left Side: Image Section -->
+              <div class="col-lg-5">
+                  <img class="img-fluid mb-4 mb-lg-0" 
+                       style="display: block; margin-top: 0; width: 100%; height: auto; object-fit: cover; border-radius: 8px;"
+                       src="img/about-us.jpeg" 
+                       alt="About Us Image" />
+              </div>
+  
+              <div class="col-lg-7">
+                <h6 class="text-uppercase mb-3" style="letter-spacing: 3px; color: #FFD700;">
+                    About Us
+                </h6>
+                <h1 class="display-4 mb-3" style="color: #FFD700;">
+                    <span style="color: #FFD700;">5+ Years' Experience</span> In Solar Power Industry
+                </h1>
+            
+                <!-- English Section -->
+                <div style="background: black; padding: 20px; border-radius: 8px; color: #FFD700;
+                            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); margin-bottom: 20px;">
+                    
+                    <h2 style="text-align: center;">☀️ Amritsar – Punjab’s Solar Hub ☀️</h2>
+            
+                    <p>Amritsar is Punjab’s <span style="font-weight: bold;">second-largest city</span>, 
+                       known for its <span style="font-weight: bold;">business, culture, and transport</span>.
+                    </p>
+            
+                    <h3>💡 Electricity Tariff</h3>
+                    <ul>
+                        <li>🏡 <b>Residential:</b> ₹7.50 per Unit</li>
+                        <li>🏢 <b>Commercial:</b> ₹7.29 per Unit</li>
+                    </ul>
+            
+                    <h3>⚡ Best Solar Solutions in Amritsar</h3>
+                    <p><b>Baba Farid Electronics and Solar Systems</b> provides top-quality solar panels, inverters, and power solutions. 🚀</p>
+            
+                    <ul>
+                        <li>✅ Reliable solar solutions for homes & businesses</li>
+                        <li>✅ Best pricing with expert service</li>
+                        <li>✅ Trusted by thousands of customers</li>
+                    </ul>
+            
+                    <h3>🔆 Special InRoof System</h3>
+                    <p>Solar panels <span style="font-weight: bold;">integrated directly into the roof</span> for a seamless look! 💡</p>
+            
+                    <h3>🌞 Off-Grid Solar Systems</h3>
+                    <p>Power outages? <b>Off-Grid Solar Systems</b> ensure 24/7 electricity.</p>
+            
+                    <ul>
+                        <li>🔋 Battery Backup – Power even at night</li>
+                        <li>💰 Save money – 100% solar-powered</li>
+                        <li>🏠 Ideal for rural & remote areas</li>
+                    </ul>
+            
+                    <h2 style="text-align: center;">💯 Save electricity, go solar, make Punjab green! 🌱☀️</h2>
+                </div>
+            
+                <!-- Punjabi Section -->
+                <div style="background: #FFD700; padding: 20px; border-radius: 8px; color: black;
+                            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+                    
+                    <h2 style="text-align: center;">☀️ ਅੰਮ੍ਰਿਤਸਰ – ਪੰਜਾਬ ਦਾ ਸੋਲਰ ਹੱਬ ☀️</h2>
+            
+                    <p>ਅੰਮ੍ਰਿਤਸਰ, ਪੰਜਾਬ ਦਾ <span style="font-weight: bold;">ਦੂਜਾ ਸਭ ਤੋਂ ਵੱਡਾ ਸ਼ਹਿਰ</span> ਹੈ, 
+                       ਜੋ ਕਿ <span style="font-weight: bold;">ਵਪਾਰ, ਸੰਸਕ੍ਰਿਤੀ ਅਤੇ ਆਵਾਜਾਈ</span> ਲਈ ਪ੍ਰਸਿੱਧ ਹੈ।
+                    </p>
+            
+                    <h3>💡 ਬਿਜਲੀ ਰੇਟ</h3>
+                    <ul>
+                        <li>🏡 <b>ਘਰੇਲੂ:</b> ₹7.50 ਪ੍ਰਤੀ ਯੂਨਿਟ</li>
+                        <li>🏢 <b>ਵਪਾਰਕ:</b> ₹7.29 ਪ੍ਰਤੀ ਯੂਨਿਟ</li>
+                    </ul>
+            
+                    <h3>⚡ ਅੰਮ੍ਰਿਤਸਰ ਵਿੱਚ ਸਭ ਤੋਂ ਵਧੀਆ ਸੋਲਰ ਹੱਲ</h3>
+                    <p><b>ਬਾਬਾ ਫਰੀਦ ਇਲੈਕਟ੍ਰਾਨਿਕਸ ਅਤੇ ਸੋਲਰ ਸਿਸਟਮ</b> ਤੁਹਾਡੀ ਸਭ ਤੋਂ ਵਧੀਆ ਚੋਣ ਹੈ! 🚀</p>
+            
+                    <ul>
+                        <li>✅ ਘਰਾਂ ਅਤੇ ਵਪਾਰ ਲਈ ਭਰੋਸੇਯੋਗ ਸੋਲਰ ਹੱਲ</li>
+                        <li>✅ ਵਧੀਆ ਮੁੱਲ ਅਤੇ ਮਾਹਰ ਸੇਵਾ</li>
+                        <li>✅ ਹਜ਼ਾਰਾਂ ਖੁਸ਼ ਗਾਹਕ</li>
+                    </ul>
+            
+                    <h3>🔆 ਵਿਸ਼ੇਸ਼ ਇੰਨਰੂਫ਼ ਸਿਸਟਮ</h3>
+                    <p>ਜਿੱਥੇ <span style="font-weight: bold;">ਸੋਲਰ ਪੈਨਲ ਛੱਤ ਵਿੱਚ ਹੀ ਇੰਸਟਾਲ ਹੁੰਦੇ ਹਨ!</span> 💡</p>
+            
+                    <h3>🌞 ਆਫ-ਗ੍ਰਿਡ ਸੋਲਰ ਸਿਸਟਮ</h3>
+                    <p>ਬਿਜਲੀ ਕੱਟ ਜਾਂਦੀ ਹੈ? <b>ਆਫ-ਗ੍ਰਿਡ ਸੋਲਰ</b> ਤੁਹਾਨੂੰ ਹਰ ਵੇਲੇ ਬਿਜਲੀ ਦਿੰਦਾ ਹੈ।</p>
+            
+                    <ul>
+                        <li>🔋 ਬੈਟਰੀ ਬੈਕਅੱਪ – ਰਾਤ ਨੂੰ ਵੀ ਬਿਜਲੀ</li>
+                        <li>💰 100% ਸੋਲਰ – ਪੈਸੇ ਬਚਾਓ</li>
+                        <li>🏠 ਪਿੰਡਾਂ ਅਤੇ ਦੂਰ-ਦੁਰੇ ਇਲਾਕਿਆਂ ਲਈ ਚੰਗਾ</li>
+                    </ul>
+            
+                    <h2 style="text-align: center;">💯 ਬਿਜਲੀ ਬਚਾਓ, ਸੋਲਰ ਲਗਾਓ, ਪੰਜਾਬ ਨੂੰ ਹਰਾ-ਭਰਾ ਬਣਾਓ! 🌱☀️</h2>
+                </div>
+            
+                <!-- Contact Info -->
+                <div style="text-align: center; margin-top: 20px; font-size: 18px; font-weight: bold; color: black;">
+                    📍 <b>Visit:</b> Baba Farid Electronics and Solar Systems, Amritsar <br>
+                    📞 <b>Call:</b> +91 9530669950
+                </div>
+            
+                <!-- Buttons -->
+                <div class="mt-4 text-center">
+                    <a class="btn" style="background: black; color: #FFD700; font-weight: bold; padding: 12px 25px; 
+                                         border-radius: 5px; text-decoration: none; 
+                                         box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); transition: 0.3s;"
+                       type="button" data-toggle="modal" data-target="#exampleModalLong">
+                        Read More
+                    </a>
+                    <a class="btn" style="background: #FFD700; color: black; font-weight: bold; padding: 12px 25px; 
+                                         border-radius: 5px; text-decoration: none; 
+                                         box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); transition: 0.3s;"
+                       type="button" href="assets/USES_compressed.pdf">
+                        Download PDF
+                    </a>
+                </div>
+            </div>
+            
+            
+            </div>
+            
           </div>
-          <div class="col-lg-7">
-            <h6
-              class="text-uppercase text-primary mb-3"
-              style="letter-spacing: 3px"
-            >
-              About Us
-            </h6>
-            <h1 class="display-4 mb-3">
-              <span class="text-primary">9+ Years' Experience</span> In Solar
-              Power Industry
-            </h1>
-            <p class="para-p">
-              Here is the revised sentence incorporating the firm name and its advantages:  
-
-    Baba Farid Smart Energy (PVT.) LTD. (UESE) – Powering Progress with Innovation! Specializing in the manufacturing, modification, maintenance, and
-     installation of solar systems, CCTV setups, data communication, and networking. UESE takes pride in its dedicated team of professionals with vast industry
-      experience in solar installation, CCTV installation, and network engineering. Our customer-oriented approach ensures the highest level of service, earning 
-      us recognition, appreciation, and customer satisfaction. With a highly skilled team of engineers and technicians, along with a state-of-the-art manufacturing
-       unit, UESE delivers flawless, reliable, and guaranteed solutions for a sustainable future.
-
-            </p>
-            <a
-              class="btn btn-primary font-weight-bold py-3 px-5 mt-2"
-              type="button"
-              data-toggle="modal"
-              data-target="#exampleModalLong"
-              
-              >Read More</a
-            >
-            <a class="btn btn-primary font-weight-bold py-3 px-5 mt-2" type="button" href="assets/USES_compressed.pdf" >Download PDF</a>
-          </div>
-        </div>
       </div>
-    </div>
+  </div>
+  
     <!-- About End -->
 <!-- href="img/USES.pdf" -->
     <!-- PDF Section -->
@@ -757,8 +896,8 @@
                   "Great customer service! They were responsive and helpful throughout the entire
                   process."
                 </p>
-                <h4>Ayub Arain</h4>
-                <span>Profession : Doctor</span>
+                <h4>Bikram</h4>
+                <span>Batala</span>
               </div>
               <div class="text-center">
                 <img
@@ -770,8 +909,8 @@
                   "The solar panels they provided are highly efficient, and we're already seeing significant
                   savings on our energy bills."
                 </p>
-                <h4>Sajjad Awan</h4>
-                <span>CEO : Awan Fabrics</span>
+                <h4>Amanpreet Singh</h4>
+                <span>Amritsar resident</span>
               </div>
             </div>
           </div>
@@ -874,7 +1013,7 @@
                 >
                   Call Us
                 </h5>
-                <p class="m-0">9417238216 <br>9417238216 <br>9530669950</p>
+                <p class="m-0">+919417238216 <br>+919417238216 <br>+919530669950</p>
               </div>
             </div>
           </div>
@@ -882,7 +1021,7 @@
         <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-lg-5" >
           <div class="row pt-5">
             <div class="col-12 mb-4 px-4">
-              <div class="row mb-5 p-4" style="background: rgba(256, 256, 256, 0.05)">
+              <div class="row mb-5 p-4" style="background: black">
                 
                 <!-- Social Media Links -->
                 <div class="col-md-4 text-center">
@@ -998,5 +1137,82 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+  
+        <style>
+            /* Floating action tab container */
+            #action-tabs {
+                position: fixed;
+                right: 10px;
+                bottom: 30%;
+                display: flex;
+                flex-direction: column;
+                z-index: 1000;
+            }
+    
+            /* Common styling for action button */
+            #action-tabs a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                font-size: 14px;
+                border-radius: 50px;
+                padding: 12px 15px;
+                width: 50px;
+                height: 50px;
+                overflow: hidden;
+                white-space: nowrap;
+                transition: all 0.4s ease-in-out;
+                box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+                transform: scale(1);
+            }
+    
+            /* Hover animation: Expands only when hovered */
+            #action-tabs a:hover {
+                width: 200px;
+                justify-content: space-between;
+                transform: scale(1.05);
+            }
+    
+            /* Floating effect (bouncing animation) */
+            @keyframes float {
+                0% { transform: translateY(0px); }
+                50% { transform: translateY(-5px); }
+                100% { transform: translateY(0px); }
+            }
+    
+            #action-tabs a {
+                animation: float 2s infinite ease-in-out;
+            }
+    
+            /* Icons */
+            #action-tabs a::before {
+                content: attr(data-icon);
+                font-size: 22px;
+                margin-right: 10px;
+            }
+    
+            /* Individual button colors */
+            .call {
+                background-color: #007bff;
+                border: 2px solid white;
+                border-radius: 50px;
+                transition: 0.3s ease-in-out;
+            }
+        
+        </style>
+    </head>
+    <body>
+    
+        <!-- Action Tabs -->
+        <div id="action-tabs">
+            <a href="tel:+919530669950" class="call" data-icon="📞">
+                <span>+91 9530669950</span>
+            </a>
+        </div>
+    
+        
   </body>
 </html>
