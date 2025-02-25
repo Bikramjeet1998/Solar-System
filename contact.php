@@ -4,6 +4,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 
+
 require 'vendor/autoload.php'; // If using Composer
 // require 'path/to/PHPMailer/src/PHPMailer.php'; // If manually installed
 // require 'path/to/PHPMailer/src/SMTP.php';
