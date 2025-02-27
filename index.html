@@ -86,44 +86,41 @@
 
   <body data-spy="scroll" data-target=".navbar" data-offset="51">
     <!-- Navbar Start -->
-    <nav
-      class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-1 py-lg-0 px-lg-5"
-    >
+    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-1 py-lg-0 px-lg-5">
+      <!-- Logo for Mobile View -->
       <a href="index.html" class="navbar-brand d-block d-lg-none">
-        <h1 class="display-6 text-white text-uppercase m-0">SOLAR ENERGY</h1>
+          <img src="img/about-us.jpeg" style = "width: 50px; height: 50px"  alt="Logo" class="nav-logo">
       </a>
-      <button
-        type="button"
-        class="navbar-toggler"
-        data-toggle="collapse"
-        data-target="#navbarCollapse"
-      >
-        <span class="navbar-toggler-icon"></span>
+  
+      <!-- Navbar Toggler (Mobile) -->
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
       </button>
-      <div
-        class="collapse navbar-collapse justify-content-between"
-        id="navbarCollapse"
-      >
-        <div class="navbar-nav ml-auto py-0">
-          <a href="#home" class="nav-item nav-link active">Home</a>
-          <a href="#about" class="nav-item nav-link">About</a>
-          <a href="#service" class="nav-item nav-link">Service</a>
-          <a href="#project" class="nav-item nav-link">Project</a>
-        </div>
-        <a
-          href="index.html"
-          class="navbar-brand bg-primary px-4 mx-3 d-none d-lg-block"
-        >
-          <h1 class="display-6 h4 text-white text-uppercase m-0">SOLAR ENERGY</h1>
-        </a>
-        <div class="navbar-nav mr-auto py-0">
-          <!-- <a href="#team" class="nav-item nav-link">Team</a> -->
-          <a href="#faqs" class="nav-item nav-link">FAQs</a>
-          <a href="#testimonial" class="nav-item nav-link">Testimonial</a>
-          <a href="#contact" class="nav-item nav-link">Contact</a>
-        </div>
+  
+      <!-- Navbar Content -->
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+          <!-- Left Nav Links -->
+          <div class="navbar-nav ml-auto py-0">
+              <a href="#home" class="nav-item nav-link active">Home</a>
+              <a href="#about" class="nav-item nav-link">About</a>
+              <a href="#service" class="nav-item nav-link">Service</a>
+              <a href="#project" class="nav-item nav-link">Project</a>
+          </div>
+  
+          <!-- Logo for Desktop View -->
+          <a href="index.html" class="navbar-brand d-none d-lg-block mx-3">
+              <img src="img/about-us.jpeg" style = "width: 50px; height: 50px"  class="nav-logo">
+          </a>
+  
+          <!-- Right Nav Links -->
+          <div class="navbar-nav mr-auto py-0">
+              <a href="#faqs" class="nav-item nav-link">FAQs</a>
+              <a href="#testimonial" class="nav-item nav-link">Testimonial</a>
+              <a href="#contact" class="nav-item nav-link">Contact</a>
+          </div>
       </div>
-    </nav>
+  </nav>
+  
     <!-- Navbar End -->
 
     <!-- Carousel Start -->
@@ -229,68 +226,80 @@
   <div class="container py-5">
 
       <!-- About Us Heading -->
-      <div class="col-md-12 text-center mb-4">
+      <div class="col-md-12 text-center-eng mb-4">
           <h3 class="text-uppercase text-warning" style="letter-spacing: 3px;">
               About Us
           </h3>
       </div>
 
-      <!-- Top Section: Logo + About Us + Experience -->
-      <div class="row align-items-center text-center mb-4 d-flex justify-content-between">
-          <!-- Logo -->
-          <div class="col-md-3 d-flex justify-content-center">
-              <img class="img-fluid" style="max-width: 100%; height: auto; object-fit: cover; border-radius: 8px;"
-                   src="img/about-us.jpeg" alt="About Us Image">
-          </div>
+      <div class="container">
+        <div class="row justify-content-center text-center-eng mb-4 align-items-center">
+            <!-- Logo Section -->
+            <div class="col-md-4 d-flex justify-content-center">
+                <img class="img-fluid rounded logo-img" src="img/about-us.jpeg" alt="About Us Image">
+            </div>
+    
+    
+            <!-- About Us Card 2 -->
+            <div class="col-md-4 d-flex justify-content-center">
+                <div class="card text-center-eng shadow custom-card">
+                    <div class="card-body">
+                        <h5 class="card-title">⭐ Experience ⭐</h5>
+                        <p class="card-text">5+ Years' Experience in the Solar Power Industry</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+  
 
-          <!-- About Us Text -->
-          <div class="col-md-5 text-center">
-              <h1 class="display-5 text-warning">
-                  5+ Years' Experience In Solar Power Industry
-              </h1>
-          </div>
-      </div>
 
-      <!-- Information Section (2 Columns in a Single Row) -->
-      <div class="row mb-4">
-          <div class="col-md-6 p-3" style="background: black; border-radius: 8px; color: #FFD700; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
-              <h2 class="text-center">☀️ Amritsar – Punjab’s Solar Hub ☀️</h2>
-              <p>Amritsar is Punjab’s <strong>second-largest city</strong>, known for its <strong>business, culture, and transport</strong>.</p>
-
-              <h3>💡 Electricity Tariff</h3>
-              <ul>
-                  <li>🏡 <b>Residential:</b> ₹7.50 per Unit</li>
-                  <li>🏢 <b>Commercial:</b> ₹7.29 per Unit</li>
-              </ul>
-
-              <h3>⚡ Best Solar Solutions</h3>
-              <p><b>Baba Farid Electronics and Solar Systems</b> provides top-quality solar solutions. 🚀</p>
-              <ul>
-                  <li>✅ Reliable & affordable</li>
-                  <li>✅ Best pricing with expert service</li>
-                  <li>✅ Trusted by thousands of customers</li>
-              </ul>
-          </div>
-
-          <div class="col-md-6 p-3" style="background: #FFD700; border-radius: 8px; color: black; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
-              <h2 class="text-center">☀️ ਅੰਮ੍ਰਿਤਸਰ – ਪੰਜਾਬ ਦਾ ਸੋਲਰ ਹੱਬ ☀️</h2>
-              <p>ਅੰਮ੍ਰਿਤਸਰ, ਪੰਜਾਬ ਦਾ <strong>ਦੂਜਾ ਸਭ ਤੋਂ ਵੱਡਾ ਸ਼ਹਿਰ</strong> ਹੈ, <strong>ਵਪਾਰ, ਸੰਸਕ੍ਰਿਤੀ ਅਤੇ ਆਵਾਜਾਈ</strong> ਲਈ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
-
-              <h3>💡 ਬਿਜਲੀ ਰੇਟ</h3>
-              <ul>
-                  <li>🏡 <b>ਘਰੇਲੂ:</b> ₹7.50 ਪ੍ਰਤੀ ਯੂਨਿਟ</li>
-                  <li>🏢 <b>ਵਪਾਰਕ:</b> ₹7.29 ਪ੍ਰਤੀ ਯੂਨਿਟ</li>
-              </ul>
-
-              <h3>⚡ ਸਭ ਤੋਂ ਵਧੀਆ ਸੋਲਰ ਹੱਲ</h3>
-              <p><b>ਬਾਬਾ ਫਰੀਦ ਇਲੈਕਟ੍ਰਾਨਿਕਸ ਅਤੇ ਸੋਲਰ ਸਿਸਟਮ</b> ਤੁਹਾਡੀ ਸਭ ਤੋਂ ਵਧੀਆ ਚੋਣ! 🚀</p>
-              <ul>
-                  <li>✅ ਭਰੋਸੇਯੋਗ ਤੇ ਵਧੀਆ ਮੁੱਲ</li>
-                  <li>✅ ਮਾਹਰ ਸੇਵਾ</li>
-                  <li>✅ ਹਜ਼ਾਰਾਂ ਖੁਸ਼ ਗਾਹਕ</li>
-              </ul>
-          </div>
-      </div>
+      <div class="container">
+        <!-- Information Section (Centered 2-Column Layout with Spacing) -->
+        <div class="row justify-content-center row-cols-1 row-cols-md-2 gx-5 mb-4">
+            <div class="col-md-5 p-4" style="background: black; border-radius: 8px; color: #FFD700; 
+                                              box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+                <h2 class="text-center">☀️ Amritsar – Punjab’s Solar Hub ☀️</h2>
+                <p>Amritsar is Punjab’s <strong>second-largest city</strong>, known for its <strong>business, culture, and transport</strong>.</p>
+    
+                <h3 class="text-center">💡 Electricity Tariff</h3>
+                <ul>
+                    <li>🏡 <b>Residential:</b> ₹7.50 per Unit</li>
+                    <li>🏢 <b>Commercial:</b> ₹7.29 per Unit</li>
+                </ul>
+    
+                <h3 class="text-center">⚡ Best Solar Solutions</h3>
+                <p><b>Baba Farid Electronics and Solar Systems</b> provides top-quality solar solutions. 🚀</p>
+                <ul>
+                    <li>✅ Reliable & affordable</li>
+                    <li>✅ Best pricing with expert service</li>
+                    <li>✅ Trusted by thousands of customers</li>
+                </ul>
+            </div>
+    
+            <div class="col-md-5 p-4" style="margin-left: 12px; background: #FFD700; border-radius: 8px; color: black; 
+                                              box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);">
+                <h2 class="text-center-pun">☀️ ਅੰਮ੍ਰਿਤਸਰ – ਪੰਜਾਬ ਦਾ ਸੋਲਰ ਹੱਬ ☀️</h2>
+                <p>ਅੰਮ੍ਰਿਤਸਰ, ਪੰਜਾਬ ਦਾ <strong>ਦੂਜਾ ਸਭ ਤੋਂ ਵੱਡਾ ਸ਼ਹਿਰ</strong> ਹੈ, <strong>ਵਪਾਰ, ਸੰਸਕ੍ਰਿਤੀ ਅਤੇ ਆਵਾਜਾਈ</strong> ਲਈ ਪ੍ਰਸਿੱਧ ਹੈ।</p>
+    
+                <h3 class="text-center-pun">💡 ਬਿਜਲੀ ਰੇਟ</h3>
+                <ul>
+                    <li>🏡 <b>ਘਰੇਲੂ:</b> ₹7.50 ਪ੍ਰਤੀ ਯੂਨਿਟ</li>
+                    <li>🏢 <b>ਵਪਾਰਕ:</b> ₹7.29 ਪ੍ਰਤੀ ਯੂਨਿਟ</li>
+                </ul>
+    
+                <h3 class="text-center-pun">⚡ ਸਭ ਤੋਂ ਵਧੀਆ ਸੋਲਰ ਹੱਲ</h3>
+                <p><b>ਬਾਬਾ ਫਰੀਦ ਇਲੈਕਟ੍ਰਾਨਿਕਸ ਅਤੇ ਸੋਲਰ ਸਿਸਟਮ</b> ਤੁਹਾਡੀ ਸਭ ਤੋਂ ਵਧੀਆ ਚੋਣ! 🚀</p>
+                <ul>
+                    <li>✅ ਭਰੋਸੇਯੋਗ ਤੇ ਵਧੀਆ ਮੁੱਲ</li>
+                    <li>✅ ਮਾਹਰ ਸੇਵਾ</li>
+                    <li>✅ ਹਜ਼ਾਰਾਂ ਖੁਸ਼ ਗਾਹਕ</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
 
       <!-- Contact & Buttons Section -->
       <div class="row align-items-center text-center mt-4">
@@ -300,21 +309,7 @@
                   📞 <b>Call:</b> +91 9530669950
               </div>
 
-              <!-- Buttons -->
-              <div class="mt-4">
-                  <a class="btn" style="background: black; color: #FFD700; font-weight: bold; padding: 12px 25px; 
-                                     border-radius: 5px; text-decoration: none; 
-                                     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); transition: 0.3s;"
-                     type="button" data-toggle="modal" data-target="#exampleModalLong">
-                      Read More
-                  </a>
-                  <a class="btn" style="background: #FFD700; color: black; font-weight: bold; padding: 12px 25px; 
-                                     border-radius: 5px; text-decoration: none; 
-                                     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); transition: 0.3s;"
-                     type="button" href="assets/USES_compressed.pdf">
-                      Download PDF
-                  </a>
-              </div>
+              
           </div>
       </div>
 

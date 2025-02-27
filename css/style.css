@@ -9575,7 +9575,46 @@ button.bg-dark:focus {
 
 .text-center {
   text-align: center !important;
+  color: black
 }
+
+.text-center-pun {
+  text-align: center !important;
+  color: #000
+}
+
+.text-center-eng {
+  text-align: center !important;
+  color: var(--yellow)
+}
+
+.custom-card {
+  background: linear-gradient(135deg, #007bff, black, #FFD700);
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 400px;
+}
+
+.custom-card .card-body {
+  background: transparent;
+  color: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.custom-card .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.custom-card .card-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #FFD700; /* Golden text for a premium look */
+}
+
+
 
 @media (min-width: 576px) {
   .text-sm-left {
